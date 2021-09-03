@@ -10,7 +10,7 @@ const { json } = require('express');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://pulkit:mumbaiaws@cluster0.no2pb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
+mongoose.connect(mongo_uri,
 { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
